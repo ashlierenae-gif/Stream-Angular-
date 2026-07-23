@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { StreamfloDetails } from "./streamflo-details/streamflo-details";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, StreamfloDetails],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
