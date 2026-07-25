@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StreamfloDetails } from "./streamflo-details/streamflo-details";
+import { SocialmediaListing } from './socialmedia-listing/socialmedia-listing';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, StreamfloDetails],
+  imports: [RouterOutlet, StreamfloDetails,SocialmediaListing],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

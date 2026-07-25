@@ -1,0 +1,13 @@
+.stream-details{
+    width: 80%;
+    padding:1.5em;
+    background-color: #D2CDC7;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.stream-picture{
+    height: 60%;
+    width: 60%;
+    display: inline-block;
+}
