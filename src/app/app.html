@@ -1,2 +1,41 @@
-<app-streamflo-details></app-streamflo-details>
-<app-socialmedia-listing></app-socialmedia-listing>
+<nav class="navbar navbar-expand-md navbar-dark mb-4" style="background-color: #D2CDC7;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+  <img src="/ui/images/afterhourslogo.png" alt="Ashlie After Hours" style="height: 40px; width: auto; border-radius: 8px; border: 2px #2a1f1b;">
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" style="color: #2a1f1b;" aria-current="page" href="/">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-light p-5 rounded" id="main">
+    <div class="container text-center mt-4">
+      <h1>Ashlie After Hours</h1>
+      <p class="lead">
+        Welcome to my streaming hub — find me on Twitch, Instagram, and YouTube below.
+      </p>
+    </div>
+<!---app-streamflo-details></app-streamflo-details--->
+<!---app-socialmedia-listing></app-socialmedia-listing--->
+<!---app-socialmedia-overview></app-socialmedia-overview--->
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+
+
+
+
+
+
+

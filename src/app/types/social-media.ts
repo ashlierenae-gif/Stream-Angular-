@@ -3,5 +3,5 @@ export interface SocialMedia {
     title: string;
     description:string;
     color:string;
-    imageURL?:string;
+    imageURL:string;
 }

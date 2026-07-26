@@ -1,0 +1,11 @@
+<div class="socialmedia-overview">
+    <img class="socialmedia-picture" src="{{currentSocial().imageURL || '/medialogo/instagramlogo.png'}}">
+   <br>
+   
+    <a [routerLink]="[ '/socialMedia',currentSocial().id] ">details...</a>
+
+    <div><span>Name:</span> {{currentSocial().title}}</div>
+    <div><span>Type:</span> {{currentSocial().description}}</div>
+
+
+</div>
