@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SocialMedia } from '../types/social-media';
-import { socialMediaList } from '../mock-data/mock-socials';
 import { SocialmediaOverview } from '../socialmedia-overview/socialmedia-overview';
+import { SocialMediaService } from '../socialmedia.service';
 
 @Component({
   selector: 'app-socialmedia-listing',
@@ -10,5 +10,10 @@ import { SocialmediaOverview } from '../socialmedia-overview/socialmedia-overvie
   styleUrl: './socialmedia-listing.css',
 })
 export class SocialmediaListing {
-  socialMedia: SocialMedia[] = socialMediaList;
+  socialMediaService: SocialMediaService = inject(SocialMediaService);
+  socialMedia: SocialMedia[];
+
+  constructor() {
+    this.socialMedia = this.socialMediaService.getSocialMedias();
+  }
 }

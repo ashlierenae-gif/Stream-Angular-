@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { SocialmediaListing } from './socialmedia-listing/socialmedia-listing';
-import { SocialmediaOverview } from './socialmedia-overview/socialmedia-overview';
+import { StreamfloDetails } from './streamflo-details/streamflo-details';
 
 export const routes: Routes = [
     {
@@ -10,7 +10,7 @@ export const routes: Routes = [
     },
     {
         path: 'socialMedia/:id',
-        component: SocialmediaOverview,
+        component: StreamfloDetails,
         title: 'Socialdetails'
     },
 ]
