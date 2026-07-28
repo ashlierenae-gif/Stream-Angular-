@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center flex-wrap gap-3">
 
-@for(social of socialMedia; track $index){
+@for(social of socialMedia(); track $index){
 <app-socialmedia-overview [currentSocial]="social"></app-socialmedia-overview>
 }
 

@@ -6,11 +6,12 @@ export const routes: Routes = [
     {
         path:'',
         component: SocialmediaListing,
-        title: 'SocialListing'
+        title: 'Ashlie After Hours'
     },
     {
         path: 'socialMedia/:id',
         component: StreamfloDetails,
-        title: 'Socialdetails'
+        title: 'Platform Details - Ashlie After Hours'
     },
+    
 ]

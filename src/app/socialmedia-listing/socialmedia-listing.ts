@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { SocialMedia } from '../types/social-media';
+import { Component, inject, signal } from '@angular/core';
+import { SocialMedia } from '../types/social-media.js';
 import { SocialmediaOverview } from '../socialmedia-overview/socialmedia-overview';
 import { SocialMediaService } from '../socialmedia.service';
 
@@ -11,9 +11,12 @@ import { SocialMediaService } from '../socialmedia.service';
 })
 export class SocialmediaListing {
   socialMediaService: SocialMediaService = inject(SocialMediaService);
-  socialMedia: SocialMedia[];
+  socialMedia = signal<SocialMedia[]>([]);
 
   constructor() {
-    this.socialMedia = this.socialMediaService.getSocialMedias();
+    this.socialMediaService.getSocialMedias()
+    .then((socialMediaData)=> {
+      this.socialMedia.set(socialMediaData);
+    });
   }
 }

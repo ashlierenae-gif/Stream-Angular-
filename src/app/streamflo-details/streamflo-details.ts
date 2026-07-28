@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { SocialMedia } from '../types/social-media';
 import { SocialMediaService } from '../socialmedia.service';
@@ -11,15 +11,18 @@ import { SocialMediaService } from '../socialmedia.service';
 })
 export class StreamfloDetails {
   route: ActivatedRoute = inject(ActivatedRoute);
-  socialMediaService: SocialMediaService=inject(SocialMediaService);
+  socialMediaService: SocialMediaService = inject(SocialMediaService);
   socialMediaID: string;
-  protected currentSocial: SocialMedia;
+  currentSocial = signal<SocialMedia>(this.socialMediaService.emptySocialMedia);
 
 
   constructor() {
     this.socialMediaID = this.route.snapshot.params['id'];
-    this.currentSocial = this.socialMediaService.getSocialMediaById(this.socialMediaID);
-  
+    this.socialMediaService.getSocialMediaById(this.socialMediaID)
+    .then((socialMediaData)=>{
+      this.currentSocial.set(socialMediaData);
+    })
+
   }
 
 
