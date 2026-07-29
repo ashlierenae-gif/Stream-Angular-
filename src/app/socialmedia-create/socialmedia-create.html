@@ -5,11 +5,17 @@
     <label for="description">Description : </label>
     <input id="description" class="form-control" formControlName="description" type="text" required>
 
-    <label for="imageURL"> imageURL : </label>
-    <input id=" imageURL" class="form-control" formControlName="imageURL" type="text">
+    <label for="logo"> Logo</label>
+    <select id="logo" class="form-control" formControlName="imageURL">
+        <option value="ui/medialogo/youtube.jpg">YouTube</option>
+        <option value="ui/medialogo/instagramlogo.jpg">Instagram</option>
+        <option value="ui/medialogo/twitchlogo.jpg">Twitch</option>
+
+    </select>
 
     <label for="link">Link : </label>
     <input id="link" class="form-control" formControlName="link" type="text" required>
+
 </form>
 
 <div class="text-center mt-3">
