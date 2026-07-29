@@ -9,5 +9,8 @@
             <a class="btn" style="background-color: #2a1f1b; color:white;" [href]="currentSocial().link"
                 target="_blank">Visit {{currentSocial().title}}</a>
         </div>
-    </div>
-</div>
+        <div class="mt-2 d-flex justify-content-center gap-2">
+            <a class="btn btn-secondary" [routerLink]="['/socialMedia', socialMediaID, 'edit']">Edit</a>
+            <button class="btn btn-danger" (click)="deletePlatform()">Delete</button>
+
+        </div>

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { SocialmediaListing } from './socialmedia-listing/socialmedia-listing';
 import { StreamfloDetails } from './streamflo-details/streamflo-details';
 import { SocialmediaCreate } from './socialmedia-create/socialmedia-create';
+import { SocialmediaEdit } from './socialmedia-edit/socialmedia-edit';
 
 export const routes: Routes = [
     {
@@ -12,7 +13,13 @@ export const routes: Routes = [
     {
         path: 'socialMedia/create',
         component: SocialmediaCreate,
-        title: 'Create new platform'
+        title: 'Create New platform'
+    },
+    {
+        path:'socialMedia/:id/edit',
+        component: SocialmediaEdit,
+        title: 'Edit New Platform'
+
     },
 
     {

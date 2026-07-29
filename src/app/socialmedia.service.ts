@@ -28,8 +28,24 @@ export class SocialMediaService {
 
             this.http.post(this.baseUrl, newPlatform,)
                 .subscribe(() => {
-                resolve();
-            });
+                    resolve();
+                });
+        });
+    }
+    deletePlatform(id: string): Promise<void> {
+        return new Promise((resolve) => {
+            this.http.delete(`${this.baseUrl}/${id}`)
+                .subscribe(() => {
+                    resolve();
+                });
+        });
+    }
+    updatePlatform(id: string, updatedPlatform: SocialMedia): Promise<void> {
+        return new Promise((resolve) => {
+            this.http.patch(`${this.baseUrl}/${id}`, updatedPlatform,)
+                .subscribe(() => {
+                    resolve();
+                });
         });
     }
 }

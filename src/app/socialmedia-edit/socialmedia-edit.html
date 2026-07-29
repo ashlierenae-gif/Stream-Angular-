@@ -1,0 +1,27 @@
+<div class="stream-details container">
+    <img class="socialmedia-picture" src="{{currentSocial().imageURL || '/ui/medialogo/instagramlogo.jpg'}}">
+
+    <div class="text-details">
+        <form [formGroup]="newPlatform">
+            <label for="title">Title : </label>
+            <input id="title" class="form-control" formControlName="title" type="text">
+
+            <label for="description" class="d-inline">Description : </label>
+            <input id="description" class="form-control" formControlName="description" type="text">
+
+            <label for="imageURL">Logo</label>
+            <select id="imageURL" class="form-control" formControlName="imageURL">
+                <option value="/ui/medialogo/youtube.jpg">YouTube</option>
+                <option value="/ui/medialogo/instagramlogo.jpg">Instagram</option>
+                <option value="/ui/medialogo/twitchlogo.jpg">Twitch</option>
+            </select>
+
+            <label for="link">Link : </label>
+            <input id="link" class="form-control" formControlName="link" type="text">
+        </form>
+
+        <div class="text-center mt-3">
+            <button class="btn btn-primary" (click)="savePlatform()">Save</button>
+        </div>
+    </div>
+</div>
