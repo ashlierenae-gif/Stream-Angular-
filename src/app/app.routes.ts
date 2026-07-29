@@ -10,14 +10,15 @@ export const routes: Routes = [
         title: 'Ashlie After Hours'
     },
     {
-        path: 'socialMedia/:id',
-        component: StreamfloDetails,
-        title: 'Platform Details - Ashlie After Hours'
-    },
-    {
         path: 'socialMedia/create',
         component: SocialmediaCreate,
         title: 'Create new platform'
+    },
+
+    {
+        path: 'socialMedia/:id',
+        component: StreamfloDetails,
+        title: 'Platform Details - Ashlie After Hours'
     },
 
 ]

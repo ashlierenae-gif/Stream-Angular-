@@ -1,10 +1,11 @@
-import { Service } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { SocialMedia } from './types/social-media';
+import { HttpClient } from '@angular/common/http';
 
 @Service()
 export class SocialMediaService {
     baseUrl = '/api/v1/streams';
-    
+    private http = inject(HttpClient);
     emptySocialMedia: SocialMedia = {
         id: '',
         title: '',
@@ -20,5 +21,15 @@ export class SocialMediaService {
     async getSocialMediaById(id: string): Promise<SocialMedia> {
         const response = await fetch(`${this.baseUrl}/${id}`);
         return await response.json();
+    }
+
+    createPlatform(newPlatform: SocialMedia): Promise<void> {
+        return new Promise((resolve) => {
+
+            this.http.post(this.baseUrl, newPlatform,)
+                .subscribe(() => {
+                resolve();
+            });
+        });
     }
 }

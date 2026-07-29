@@ -1,1 +1,17 @@
-<p>socialmedia-create works!</p>
+<form [formGroup]="newPlatform">
+    <label for="title">Title</label>
+    <input id="title" class="form-control" formControlName="title" type="text" required>
+
+    <label for="description">Description : </label>
+    <input id="description" class="form-control" formControlName="description" type="text" required>
+
+    <label for="imageURL"> imageURL : </label>
+    <input id=" imageURL" class="form-control" formControlName="imageURL" type="text">
+
+    <label for="link">Link : </label>
+    <input id="link" class="form-control" formControlName="link" type="text" required>
+</form>
+
+<div class="text-center mt-3">
+    <button class="btn btn-primary" (click)="createPlatform()">Create</button>
+</div>
