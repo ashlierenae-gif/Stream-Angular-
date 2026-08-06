@@ -1,7 +1,14 @@
+<div class="container text-center mt-4">
+    <h1>Ashlie After Hours</h1>
+    <p class="lead">
+        Welcome to my streaming hub — find me on Twitch, Instagram, and YouTube below.
+    </p>
+</div>
+
 <div class="d-flex justify-content-center flex-wrap gap-3">
 
-@for(social of socialMedia(); track $index){
-<app-socialmedia-overview [currentSocial]="social"></app-socialmedia-overview>
-}
+    @for(social of socialMedia(); track $index){
+    <app-socialmedia-overview [currentSocial]="social"></app-socialmedia-overview>
+    }
 
 </div>

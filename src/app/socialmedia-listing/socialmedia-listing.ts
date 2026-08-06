@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { SocialMedia } from '../types/social-media.js';
 import { SocialmediaOverview } from '../socialmedia-overview/socialmedia-overview';
 import { SocialMediaService } from '../socialmedia.service';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-socialmedia-listing',
-  imports: [SocialmediaOverview],
+  imports: [SocialmediaOverview, RouterOutlet],
   templateUrl: './socialmedia-listing.html',
   styleUrl: './socialmedia-listing.css',
 })

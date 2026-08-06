@@ -3,6 +3,7 @@ import { SocialmediaListing } from './socialmedia-listing/socialmedia-listing';
 import { StreamfloDetails } from './streamflo-details/streamflo-details';
 import { SocialmediaCreate } from './socialmedia-create/socialmedia-create';
 import { SocialmediaEdit } from './socialmedia-edit/socialmedia-edit';
+import { FeaturedClips } from './featured-clips/featured-clips';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,11 @@ export const routes: Routes = [
         component: SocialmediaEdit,
         title: 'Edit New Platform'
 
+    },
+    {
+        path: 'featured',
+        component: FeaturedClips,
+        title: 'Featured Clips'
     },
 
     {

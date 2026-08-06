@@ -1,23 +1,25 @@
-<div class="stream-details container">
-    <img class="socialmedia-picture" src="{{currentSocial().imageURL || '/ui/medialogo/instagramlogo.jpg'}}">
+<div class="stream-details container text-center py-5">
+    <img class="socialmedia-picture mb-4" src="{{currentSocial().imageURL || '/ui/medialogo/instagramlogo.jpg'}}"
+        style="height: 200px; width:200px; object-fit:cover; border-radius: 12px;">
 
-    <div class="text-details">
+    <div class="mx-auto" style="max-width: 500px;">
         <form [formGroup]="newPlatform">
-            <label for="title">Title : </label>
-            <input id="title" class="form-control" formControlName="title" type="text">
+            <label for="title">Title: </label>
+            <input id="title" class="form-control mb-3" formControlName="title" type="text">
 
-            <label for="description" class="d-inline">Description : </label>
-            <input id="description" class="form-control" formControlName="description" type="text">
+            <label for="description" class="d-inline">Description: </label>
+            <input id="description" class="form-control mb-3" formControlName="description" type="text">
 
-            <label for="imageURL">Logo</label>
-            <select id="imageURL" class="form-control" formControlName="imageURL">
+            <label for="imageURL">Logo:</label>
+            <select id="imageURL" class="form-control mb-3" formControlName="imageURL">
                 <option value="/ui/medialogo/youtube.jpg">YouTube</option>
                 <option value="/ui/medialogo/instagramlogo.jpg">Instagram</option>
                 <option value="/ui/medialogo/twitchlogo.jpg">Twitch</option>
+                <option value="/ui/medialogo/tiktoklogo.jpg">Tiktok</option>
             </select>
 
-            <label for="link">Link : </label>
-            <input id="link" class="form-control" formControlName="link" type="text">
+            <label for="link">Link: </label>
+            <input id="link" class="form-control mb-3" formControlName="link" type="text">
         </form>
 
         <div class="text-center mt-3">

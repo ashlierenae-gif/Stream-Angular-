@@ -1,24 +1,22 @@
-.socialmedia-overview{
-    margin-left: 0.75em;
-    margin-right: 0.75em;
-    margin-bottom: 1.5em;
-    padding-top: 1.5em;
-    padding-bottom: 0.5em;
+.socialmedia-overview {
+    margin: 1em;
+    padding: 2em 1.5em;
     display: inline-block;
-    width: 15em;
+    width: 16em;
     text-align: center;
-    background-color: #D2CDC7;
-    border-radius: 25px;
-
+    background-color: #241733;
+    border: 1px solid #9146FF;
+    border-radius: 16px;
 }
 
-.socialmedia-picture{
+.socialmedia-overview:hover {
+  transform: translateY(-4px);
+}
+
+.socialmedia-overview img {
+    display: inline-block;
     height: 120px;
     width: 120px;
     object-fit: cover;
-    border-radius: 10px;
-    display: inline-block;
-}
-.socialmedia-overview img{
-    display: inline-block;
+    border-radius: 12px;
 }

@@ -1,31 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-.socialmedia-details{
-    width: 80%;
-    padding: 1.5em;
-    background-color: #D2CDC7;
-    text-align: center;
-    border-radius: 25px;
-}
-
-.socialmedia-picture{
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: inline-block;
-}
-.text-details{
-    text-align: left;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 body {
+  background-color: #1A1025;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
-h1, h3 {
-  font-family: 'Alex Brush', cursive;
-  font-weight: 600;
+h1, h2 {
+  font-family: 'Beau Rivage', cursive;
+  font-size: 3rem
+}
+.btn:hover {
+  opacity: 0.85;
 }
